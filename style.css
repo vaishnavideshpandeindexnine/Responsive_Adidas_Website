@@ -6,7 +6,7 @@ body{
 nav{
     background-color: #111;
     color: white;
-    padding: 20px 50px;
+    padding: 10px 50px;
 }
 .navTop{
     display: flex;
@@ -31,4 +31,114 @@ nav{
     font-size: 20px;
     border-bottom: 2px solid green;
     cursor: pointer;
+}
+.navBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;/*Aligns items center horizontally*/
+}
+.menuItem{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 50px;
+    cursor: pointer;
+    color: lightgray;
+    
+}
+.slider{
+    background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
+    overflow: hidden; /*To hide the horizontal scroll bar*/
+}
+.sliderWrapper{
+    display: flex;
+    width: 500vw; /*vw(Viewport width)  If you change the width of your browser window, the size of the box should change.*/
+    transition: all 1s ease-in-out;
+}
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sliderBg{
+    width: 780px;
+    height: 780px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.sliderImg{
+    z-index: 1;
+}
+.sliderTitle{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    z-index: 1;/*To see the text above the image*/
+}
+.sliderPrice{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: white;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid gray;
+    z-index: 1;
+}
+.buybutton{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    background-color: #111;
+    border: 1px solid gray;
+    z-index: 1;
+    cursor: pointer;
+}
+.buybutton:hover{
+    background-color: white;
+    color: #111;
+}
+/*This is written to give every slider a different bg color*/
+.sliderItem:nth-child(1) .sliderBg{ /*Give space at leftside of dot mandatory*/
+    background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: rgb(82, 72, 93);
+}
+.sliderItem:nth-child(3) .sliderBg{
+    background-color: rgb(89, 101, 101);
+}
+.sliderItem:nth-child(4) .sliderBg{
+    background-color: rgb(64, 74, 93);
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: rgb(100, 100, 82);
+}
+
+.sliderItem:nth-child(1) .sliderPrice{ /*Give space at leftside of dot mandatory*/
+    color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderPrice{
+    color: white;
+}
+.sliderItem:nth-child(3) .sliderPrice{
+    color: rgb(89, 101, 101);
+}
+.sliderItem:nth-child(4) .sliderPrice{
+    color: rgb(64, 74, 93);
+}
+.sliderItem:nth-child(5) .sliderPrice{
+    color: rgb(100, 100, 82);
 }
