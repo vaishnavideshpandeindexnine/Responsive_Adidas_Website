@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Lato', sans-serif;
     padding: 0;
@@ -78,7 +81,7 @@ nav{
     top: 10%;
     right: 10%;
     color: white;
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 900;
     text-align: center;
     z-index: 1;/*To see the text above the image*/
@@ -97,7 +100,7 @@ nav{
 .buybutton{
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 13%;
     color: white;
     font-size: 40px;
     font-weight: 900;
@@ -141,4 +144,183 @@ nav{
 }
 .sliderItem:nth-child(5) .sliderPrice{
     color: rgb(100, 100, 82);
+}
+
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+.featureIcon{
+    width: 60px;
+    height: 60px;
+}
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+.featureDesc{
+    color: gray;
+    width: 50%;
+    height: 100px;
+    font-size: 20px;
+}
+
+.product{
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.payment{
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 8px -2px 19px -3px rgba(0,0,0,0.54);
+-webkit-box-shadow: 8px -2px 19px -3px rgba(0,0,0,0.54);
+-moz-box-shadow: 8px -2px 19px -3px rgba(0,0,0,0.54);
+}
+
+.payTitle{
+    font-size: 30px;
+    color: lightgrey;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.payInput{
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder{
+    color: rgb(180, 177, 177);
+}
+
+.cardIcons{
+    display: flex;
+}
+
+.cardIcon{
+    margin-right: 10px;
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm{
+    width: 30%;
+}
+
+.payButton{
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    box-shadow: 8px -2px 19px -3px rgba(0,0,0,0.54);
+-webkit-box-shadow: 8px -2px 19px -3px rgba(0,0,0,0.54);
+-moz-box-shadow: 8px -2px 19px -3px rgba(0,0,0,0.54);
+background-color: #369e62;
+color: white;
+border: none;
+cursor: pointer;
+font-size: 20px;
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #8f8989;
+    color: white;
+    top: 10;
+    right: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.productImg{
+    width: 50%;
+}
+.productDetails{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+}
+.productTitle{
+    font-size: 75px;
+    font-weight: 900;
+}
+.productDesc{
+    font-size: 24px;
+    color: gray;
+}
+.colors,.sizes{
+    display: flex;
+    margin-bottom: 20px;
+}
+.color{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: #111;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color:last-child{
+    background-color: darkblue;
+}
+.size{
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+.productButton{
+    float: right;
+    padding: 10px 20px;
+    background-color: #111;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.productButton:hover{
+    background-color: white;
+    color: #111;
 }
