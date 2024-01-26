@@ -2,6 +2,7 @@ html{
     scroll-behavior: smooth;
     
 }
+/* Hides the scrollbar but is functional*/
 html::-webkit-scrollbar {
     display: none;}
 body{
